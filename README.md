@@ -1,6 +1,9 @@
 # Open\_Computing\_Lab\_Guide
 Introductory guide to a prototype Open Computing Lab
 
+This guide is also autobuilt as an `nbsphinx` site nd published via Github Pages at [innovationoutside.github.io/Open_Computing_Lab_Guide/](https://innovationoutside.github.io/Open_Computing_Lab_Guide/).
+
+
 At the moment, this is a toolkit of documents:
 
 - [`about.md`](about.md): a brief overview of the philosophy behind, and motivation for, the *Open Computing Lab* approach;

@@ -21,7 +21,7 @@ jupyter:
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "slide"} -->
-The `Open Computing Lab` (OCL) approach is being trialled on several Open University modules and aims to provide a common approach to delivering complex software and computing envronments on personal computers as well as via remotely hosted online servers.
+The `Open Computing Lab` (OCL) approach is being trialled on several Open University modules and aims to provide a common approach to delivering complex software and computing environments on personal computers as well as via remotely hosted online servers.
 <!-- #endregion -->
 
 The motivating idea for the Open Computing Lab approach is the provision of module specific computational environments capable of being run locally by students, on OU hosted onlines servers, and on remote third party servers, using a standardised approach.

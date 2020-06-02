@@ -1,6 +1,6 @@
 
-Open Computing Labd Guide
-=========================
+Open Computing Lab Guide
+========================
 
 *Note this is a proof of concept only and not an official OU project.*
 

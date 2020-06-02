@@ -53,7 +53,8 @@ jobs:
           git config --global user.name "$GITHUB_ACTOR"
           git checkout build
           # And bring down changes from master
-          git merge --allow-unrelated-histories
+          #git merge --allow-unrelated-histories
+          git pull origin master
       - name: Build docs HTML
         run: python -m sphinx . ./_build/html/ -b html
 

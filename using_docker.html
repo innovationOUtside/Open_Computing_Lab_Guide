@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements &#8212; Open Computing Lab Guide  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Running an Open Computing Lab Environment via the ContainDS Application" href="using_containds.html" />
+    <link rel="prev" title="Open_Computing_Lab (OCL)" href="about.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="Running-An-Open-Computing-Lab-Environment-On-Your-Own-Computer---Computer-Requirements">
+<h1>Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements<a class="headerlink" href="#Running-An-Open-Computing-Lab-Environment-On-Your-Own-Computer---Computer-Requirements" title="Permalink to this headline">¶</a></h1>
+<p>To run an Open Computing Lab environment on your computer, we suggest you install the prebuilt OCL environment developed for your module. For TM129, this is the prebuilt RoboLab environment. Using this environment has the advantage that the module team knows exactly what’s inside it and how to help fix things if they appear to go wrong.</p>
+<p>The downside is that the environment is quite large in terms of memory requirements: you will need at least 5GB of free memory to install it the environment, as well as its dependencies.</p>
+<p>The underlying Docker application, which provides the virtualisation tools used to run the environment, is also happiest on computers with at least 4GB of RAM available.</p>
+</div>
+<div class="section" id="Downloading-and-Installing-Your-Open-Computing-Lab-Environment">
+<h1>Downloading and Installing Your Open Computing Lab Environment<a class="headerlink" href="#Downloading-and-Installing-Your-Open-Computing-Lab-Environment" title="Permalink to this headline">¶</a></h1>
+<p>Open Computing Lab environments run in a simple virtual machine known as a Docker container.</p>
+<p>To run an Open Computing Lab environment on your own computer, you will need to download and install the <em>Docker</em> application. Optionally, you may also choose the download the <em>ContainDS</em> application, which provides a graphical user interface for managing a Docker containers. If you do not download <em>ContainDS</em>, you can still control your Docker containers using command line commands issued from a terminal or command prompt.</p>
+</div>
+<div class="section" id="Download-and-Install-Docker">
+<h1>Download and Install Docker<a class="headerlink" href="#Download-and-Install-Docker" title="Permalink to this headline">¶</a></h1>
+<p>Docker is the virtualisation platform that runs the RoboLab environment. You should download and install the latest version of Docker from the <a class="reference external" href="https://www.docker.com/products/docker-desktop">Docker website</a>, following the instructions for your particular operating system:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">Docker Desktop for Windows</a> (<a class="reference external" href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe">direct download link</a>): <em>requires Windows 10 64-bit: Pro, Enterprise, or Education</em></p>
+<ul>
+<li><p>if your Windows machine does not meet the requirements for installing <em>Docker Desktop for Windows</em>, you should still be able to run Docker using the <a class="reference external" href="https://docs.docker.com/toolbox/toolbox_install_windows/">Docker Toolbox on Windows</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">Docker Desktop for Mac</a> (<a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">direct download link</a>): <em>requires macOS 10.12 or newer, hardware from 2010 or newer</em>)</p>
+<ul>
+<li><p>for older Macs that do not meet the requirements for installing <em>Docker Desktop for Mac</em>, you may still be able to run Docker using the <a class="reference external" href="https://docs.docker.com/toolbox/toolbox_install_mac/">Docker Toolbox on Mac OS</a></p></li>
+</ul>
+</li>
+<li><p><em>Linux</em>: you may find that Docker is already installed on your Linux computer (in a terminal, run the command <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">--version</span></code> to check). If it isn’t available, you should install the latest version of the <em>Docker Engne - Community Edition</em> from the Docker repository. Find your flavour of Linux on the <a class="reference external" href="https://docs.docker.com/install/">Docker Engine overview</a> page and follow the links to install the package on your particular operating system.</p></li>
+</ul>
+<p>Locate the folder containing the downloaded installer: your browser may have a <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder or it may have saved the downloaded file to the <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Documents</span></code> or <code class="docutils literal notranslate"><span class="pre">Desktop</span></code> folder. Inside the download folder, find the downloaded installer file and double-click it to run it.</p>
+<p><strong>TO DO - could we get any security warnings?? If so, what, and how do we resolve them??</strong></p>
+<p><strong>TO DO: There may be issues on Windows around things like virtualisation settings (HyperV and Docker don’t necessarily play nice). Please add any issues / problems relating specifically to getting Docker and the Docker container working to</strong><a class="reference external" href="https://github.com/innovationOUtside/tm129-robotics2020/issues/7">this tracking issue</a><strong>.</strong></p>
+<p>If you saved the installer earlier, you may now delete it since it is no longer required.</p>
+<p>Docker runs as an application service and it should automatically start and run in the background.</p>
+</div>
+<div class="section" id="Running-an-Open-Computing-Lab-Environment-Via-Docker">
+<h1>Running an Open Computing Lab Environment Via Docker<a class="headerlink" href="#Running-an-Open-Computing-Lab-Environment-Via-Docker" title="Permalink to this headline">¶</a></h1>
+<p>There are two recommended ways you can run your Open Computing Lab environment:</p>
+<ul class="simple">
+<li><p>by issuing commands on the command line from a terminal / command prompt <strong>[CURRENTLY RECOMMENDED ROUTE]</strong>;</p></li>
+<li><p>using a Docker container management application suchs as <em>ContainDS</em>.</p></li>
+</ul>
+<div class="section" id="Running-an-Open-Computing-Lab-Environment-from-the-Command-Line">
+<h2>Running an Open Computing Lab Environment from the Command Line<a class="headerlink" href="#Running-an-Open-Computing-Lab-Environment-from-the-Command-Line" title="Permalink to this headline">¶</a></h2>
+<p>It is quite possible to launch the RoboLab virtual environment from a terminal / command prompt and then access the actual environment via your browser in the normal way, although it is slightly more fiddly than using ContainDS.</p>
+<div class="section" id="On-a-Mac-/-Linux-Machine:">
+<h3>On a Mac / Linux Machine:<a class="headerlink" href="#On-a-Mac-/-Linux-Machine:" title="Permalink to this headline">¶</a></h3>
+<p>Open a terminal. From the command prompt, do the following:</p>
+<ul class="simple">
+<li><p>create a working directory / folder to work in by entering the command: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">TM129</span></code>;</p></li>
+<li><p>change directory into that directory by running the command: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">TM129</span></code>;</p></li>
+<li><p>start the container by running the command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">tm129test</span> <span class="pre">-p</span> <span class="pre">8129:8888</span> <span class="pre">-v</span> <span class="pre">$PWD:/home/jovyan/notebooks</span> <span class="pre">-e</span> <span class="pre">JUPYTER_TOKEN=&quot;letmein&quot;</span> <span class="pre">ousefuldemos/tm129-robotics2020:latest</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="On-Windows:">
+<h3>On Windows:<a class="headerlink" href="#On-Windows:" title="Permalink to this headline">¶</a></h3>
+<p>Open a command prompt and run the following commands [UNTESTED]:</p>
+<ul class="simple">
+<li><p>create a working directory / folder to work in by entering the command: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">TM129</span></code>;</p></li>
+<li><p>change directory into that directory by running the command: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">TM129</span></code>;</p></li>
+<li><p>check the current directory path: <code class="docutils literal notranslate"><span class="pre">cd</span></code>. Assuming it returns something like <code class="docutils literal notranslate"><span class="pre">C:\\users\YOURUSER\TM129</span></code>, start the container by running the command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">tm129test</span> <span class="pre">--rm</span> <span class="pre">-d</span> <span class="pre">-p</span> <span class="pre">8897:8888</span> <span class="pre">-v</span> <span class="pre">//C/users/YOURUSER/TM129/notebooks:/home/jovyan/notebooks</span>&#160; <span class="pre">ousefuldemos/tm351-binderised:latest</span></code></p></li>
+</ul>
+<p><strong>TO DO: does this require the notebooks dir to be available? If so: ``mkdir notebooks`` before the ``docker run…`` command.</strong> In Windows, you cannot mount on to a non-empty directory inside the container. You can, however, define and automaticaly create your own directory. For it to be visible to the notebook server homepage, the shared directory needs to be mounted along the <code class="docutils literal notranslate"><span class="pre">/home/jovyan/'</span></code> directory path. For example, <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">c:\tm129share\notebooks:c:\home\jovyan\mySharedDirectory</span></code>.</p>
+</div>
+</div>
+<div class="section" id="Once-the-Docker-Container-is-running…">
+<h2>Once the Docker Container is running…<a class="headerlink" href="#Once-the-Docker-Container-is-running…" title="Permalink to this headline">¶</a></h2>
+<p>When you run the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">...</span></code> command, several things will happen:</p>
+<ul class="simple">
+<li><p>first, docker will download the container image from DockerHub (this may take some time but only happens the first time you try to run the container);</p></li>
+<li><p>then, docker will launch the container and a Jupyter notebook server will start running inside it.</p></li>
+</ul>
+<p>When the container is running, go to <code class="docutils literal notranslate"><span class="pre">localhost:8129</span></code> in your browser (if that doesn’t work, try <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8129</span></code>) and you should see a running notebook server there.</p>
+<p>Use the token <code class="docutils literal notranslate"><span class="pre">letmein</span></code> to access the server (you should only need to do this once).</p>
+<p><img alt="image0" src="_images/Jupyter_Notebook_token.png" /></p>
+<div class="section" id="What-to-do-if-the-Token-isn’t-set-or-doesn’t-work">
+<h3>What to do if the Token isn’t set or doesn’t work<a class="headerlink" href="#What-to-do-if-the-Token-isn’t-set-or-doesn’t-work" title="Permalink to this headline">¶</a></h3>
+<p>As a simple security measure, the notebook server requires a token or password the first time the server is accessed from a particular web browser.</p>
+<p>If the token you have tried does not work, or if you did not start the container with the <code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">JUPYTER_TOKEN=&quot;letmein&quot;</span></code> environmental variable setting, you will need to find the token used to access the notebook server. Run the command-line command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">-it</span> <span class="pre">tm129test</span> <span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">list</span></code></p>
+<p>This will display something along the lines of:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Currently</span> <span class="pre">running</span> <span class="pre">servers:</span> <span class="pre">http://0.0.0.0:8888/?token=dca25d6755dbd2a1c9b346dca3b8c839e44c9271e20bc416</span> <span class="pre">::</span> <span class="pre">/home/jovyan</span></code></p>
+<p>Use the token value (in the above example, <code class="docutils literal notranslate"><span class="pre">dca25d6755dbd2a1c9b346dca3b8c839e44c9271e20bc416</span></code>) to log in to the server.</p>
+</div>
+</div>
+</div>
+<div class="section" id="Sharing-Files-into-the-Container">
+<h1>Sharing Files into the Container<a class="headerlink" href="#Sharing-Files-into-the-Container" title="Permalink to this headline">¶</a></h1>
+<p>Any files in the local <code class="docutils literal notranslate"><span class="pre">TM129</span></code> directory on your host computer should appear in the notebooks folder in the notebook homepage directory listing.</p>
+<p>The run command will create a notebooks directory in the directory you issued the run command from, and then share it into the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> folder that you can see from the notebook server homepage. OpenRefine projects are also shared between your local machine and the container.</p>
+<p>Files that exist outside the <code class="docutils literal notranslate"><span class="pre">/home/joyan/notebooks</span></code> directory path in the container (which is to say, outside the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> directory viewable from the notebook server homepage, <em>will not be shared to your local desktop</em>.</p>
+<p>TO DO - files are shipped with the container; to copy them into the shared folder so they appear on your desktop, you will need to rename the ?? folder to ??. SCREENSHOT / instruction</p>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="about.html" title="Previous document">Open_Computing_Lab (OCL)</a>
+        </li>
+        <li>
+          <a href="using_containds.html" title="Next document">Running an Open Computing Lab Environment via the ContainDS Application</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Open Computing Lab Guide</a></h1>
+
+
+
+<p class="blurb">Documentation...</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Open_Computing_Lab (OCL)</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Downloading-and-Installing-Your-Open-Computing-Lab-Environment">Downloading and Installing Your Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Download-and-Install-Docker">Download and Install Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Running-an-Open-Computing-Lab-Environment-Via-Docker">Running an Open Computing Lab Environment Via Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Running-an-Open-Computing-Lab-Environment-from-the-Command-Line">Running an Open Computing Lab Environment from the Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Once-the-Docker-Container-is-running…">Once the Docker Container is running…</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Sharing-Files-into-the-Container">Sharing Files into the Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_containds.html">Running an Open Computing Lab Environment via the ContainDS Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_mybinder.html">Accessing RoboLab Online - MyBinder / BinderHub</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html">Use in TM129</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html#Accessing-the-TM129-Open-Computing-Lab-Environment">Accessing the TM129 Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm351.html">Use In TM351</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="about.html" title="previous chapter">Open_Computing_Lab (OCL)</a></li>
+      <li>Next: <a href="using_containds.html" title="next chapter">Running an Open Computing Lab Environment via the ContainDS Application</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;The Open University, 2020.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/using_docker.md"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

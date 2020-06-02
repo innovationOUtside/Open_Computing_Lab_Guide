@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Obtaining the RoboLab Instructional Materials &#8212; Open Computing Lab Guide  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="Obtaining-the-RoboLab-Instructional-Materials">
+<h1>Obtaining the RoboLab Instructional Materials<a class="headerlink" href="#Obtaining-the-RoboLab-Instructional-Materials" title="Permalink to this headline">¶</a></h1>
+<p>We have provided a complete set of interactive instructional materials for working through the RoboLab activities in the RoboLab environment when run as a standalone container. However, if you share a local directory into the container using ContainDS, this will overwrite all those files.</p>
+<p>If you need to download the materials separately, they can be downloaded from:</p>
+<ul class="simple">
+<li><p>[TEMPORARY]: the <a class="reference external" href="https://github.com/innovationOUtside/tm129-robotics2020">innovationOUtside/tm129-robotics2020</a> repository;</p></li>
+<li><p>the Resources area of the VLE???? <strong>TO DO</strong></p></li>
+</ul>
+<p>The contents of the repository can also be , it’s easier to use the <code class="docutils literal notranslate"><span class="pre">nbgitpuller</span></code> application. From your notebook homepagem for example at <code class="docutils literal notranslate"><span class="pre">http://localhost:32796/tree</span></code> (your port number may well be different to <code class="docutils literal notranslate"><span class="pre">32796</span></code>…) change the path from <code class="docutils literal notranslate"><span class="pre">tree</span></code> to:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git-pull?repo=https%3A%2F%2Fgithub.com%2FinnovationOUtside%2Ftm129-robotics2020&amp;urlpath=tree%2Ftm129-robotics2020%2F&amp;depth=1</span></code></p>
+<p>to give a URL of the form:</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://localhost:YOUR_PORT_NUMBER/git-pull?repo=https%3A%2F%2Fgithub.com%2FinnovationOUtside%2Ftm129-robotics2020&amp;urlpath=tree%2Ftm129-robotics2020%2F&amp;depth=1</span></code></p>
+<p>Entering this URL will download the contents of the repository, making them available via the notebook server homepage and saving them to you local, shared directory if you are working with a local, shared workspace.</p>
+<p>The materials are presented as a set of Jupyter notebooks. They include written guidance and example code that you can edit and execute. You can also add text cells to keep your own commentary and notes inside the notebook, as well as code cells in which you can write and run your own robot programming code.</p>
+<p>You will probably want to keep copies of your annotated and executed notebooks as you work through them.</p>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Open Computing Lab Guide</a></h1>
+
+
+
+<p class="blurb">Documentation...</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Open_Computing_Lab (OCL)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html">Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Downloading-and-Installing-Your-Open-Computing-Lab-Environment">Downloading and Installing Your Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Download-and-Install-Docker">Download and Install Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Running-an-Open-Computing-Lab-Environment-Via-Docker">Running an Open Computing Lab Environment Via Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Sharing-Files-into-the-Container">Sharing Files into the Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_containds.html">Running an Open Computing Lab Environment via the ContainDS Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_mybinder.html">Accessing RoboLab Online - MyBinder / BinderHub</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html">Use in TM129</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html#Accessing-the-TM129-Open-Computing-Lab-Environment">Accessing the TM129 Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm351.html">Use In TM351</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;The Open University, 2020.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/obtaining_materials.md"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

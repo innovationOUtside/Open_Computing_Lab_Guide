@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Use In TM351 &#8212; Open Computing Lab Guide  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Use in TM129" href="use_in_tm129.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="Use-In-TM351">
+<h1>Use In TM351<a class="headerlink" href="#Use-In-TM351" title="Permalink to this headline">¶</a></h1>
+<p>Jupyter notebooks have been used deliver practical activities in <em>TM351 Data Management and Analysis</em> for several years.</p>
+<p>To date, the complex computing environment used to support the module activities has been delivered via a Virtualbox virtual machine.</p>
+<p>From 20J, the intention is to deliver software to students:</p>
+<ul class="simple">
+<li><p>via Docker, using <em>Open Computing Lab</em> approaches;</p></li>
+<li><p>via an online OU hosted environment <em>not</em> created from the <em>Open Computing Lab</em> context <em>[(though it arguably could and should be…)]</em>.</p></li>
+</ul>
+<div class="section" id="Accessing-the-TM351-Open-Computing-Lab-Environment">
+<h2>Accessing the TM351 Open Computing Lab Environment<a class="headerlink" href="#Accessing-the-TM351-Open-Computing-Lab-Environment" title="Permalink to this headline">¶</a></h2>
+<p>The TM351 Open Computing Lab environment repository can be found at <code class="docutils literal notranslate"><span class="pre">`tm351vm-binder</span></code> &lt;<a class="reference external" href="https://github.com/innovationOUtside/tm351vm-binder/">https://github.com/innovationOUtside/tm351vm-binder/</a>&gt;`__.</p>
+<p>The environment includes:</p>
+<ul class="simple">
+<li><p>Jupyter notebooks</p></li>
+<li><p>lots of preinstalled Python packages</p></li>
+<li><p>OpenRefine</p></li>
+<li><p>a PostgreSQL database server</p></li>
+<li><p>a MongoDB database server</p></li>
+</ul>
+<p>The container can be retrieved from DockerHub as <code class="docutils literal notranslate"><span class="pre">ousefuldemos/tm351-binderised:latest</span></code></p>
+<div class="section" id="Accessing-the-Environment-Via-Mybinder">
+<h3>Accessing the Environment Via Mybinder<a class="headerlink" href="#Accessing-the-Environment-Via-Mybinder" title="Permalink to this headline">¶</a></h3>
+<p>You can launch the environment on MyBinder directly from these buttons…</p>
+<p>Open to Notebook homepage: <a class="reference external" href="https://gke.mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>Open to OpenRefine: <a class="reference external" href="https://gke.mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>Open to Jupyterlab: <a class="reference external" href="https://gke.mybinder.org/v2/gh/innovationOUtside/tm351vm-binder/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+</div>
+<div class="section" id="Running-the-Environment-on-Your-Own-Computer">
+<h3>Running the Environment on Your Own Computer<a class="headerlink" href="#Running-the-Environment-on-Your-Own-Computer" title="Permalink to this headline">¶</a></h3>
+<p>To run the environment on your own computer, you need to do the following:</p>
+<ul class="simple">
+<li><p>install Docker onto your computer; you can download the installation files from the Docker website: Get Docker</p></li>
+<li><p>open a terminal / command prompt in your desktop; from the command prompt, do the following:</p></li>
+<li><p>create a working directory / folder to work in by entering the command: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">TM351</span></code>;</p></li>
+<li><p>change directory into that fold by running the command: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">TM351</span></code>;</p></li>
+</ul>
+<p>To run the container from the command line on a Mac:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">tm351test</span> <span class="pre">--rm</span> <span class="pre">-d</span> <span class="pre">-p</span> <span class="pre">8351:8888</span> <span class="pre">-v</span> <span class="pre">$PWD/notebooks:/home/jovyan/notebooks</span> <span class="pre">-v</span> <span class="pre">$PWD/openrefine_projects:/home/jovyan/openrefine</span> <span class="pre">-e</span> <span class="pre">JUPYTER_TOKEN=&quot;letmein&quot;</span> <span class="pre">ousefuldemos/tm351-binderised:latest</span></code></p>
+<p>This will serve the container on <code class="docutils literal notranslate"><span class="pre">http://localhost:8351</span></code> and share folders from the current directory; login with the token <code class="docutils literal notranslate"><span class="pre">letmein</span></code> or whatever token you set.</p>
+<p>On Windows, I think you need to try something like the following [UNTESTED]:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">c:\tm351share</span></code> <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">tm351test</span> <span class="pre">--rm</span> <span class="pre">-d</span> <span class="pre">-p</span> <span class="pre">8351:8888</span> <span class="pre">-v</span> <span class="pre">c:\tm351share\notebooks:c:\home\jovyan\notebooks</span> <span class="pre">-v</span> <span class="pre">c:\tm351share\openrefine_projects:c:\home\jovyan\openrefine</span> <span class="pre">-e</span> <span class="pre">JUPYTER_TOKEN=&quot;letmein&quot;</span> <span class="pre">ousefuldemos/tm351-binderised:latest</span></code></p>
+</div>
+<div class="section" id="Starting-and-Stopping-the-Container">
+<h3>Starting and Stopping the Container<a class="headerlink" href="#Starting-and-Stopping-the-Container" title="Permalink to this headline">¶</a></h3>
+<p>From the command line / command prompt, run the following commands:</p>
+<ul class="simple">
+<li><p>stop (hibernate) the container with the command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">tm351test</span></code></p></li>
+<li><p>restart the container with the command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">restart</span> <span class="pre">tm351test</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="Accessing-Your-Files">
+<h3>Accessing Your Files<a class="headerlink" href="#Accessing-Your-Files" title="Permalink to this headline">¶</a></h3>
+<p>Files that exist outside the <code class="docutils literal notranslate"><span class="pre">/home/joyan/notebooks</span></code> and <code class="docutils literal notranslate"><span class="pre">/home/jovyan/openrefine</span></code> directory paths <em>in the container</em> (which is to say, outside the notebooks and openrefine directories viewable from the notebook server homepage, will not be shared to your local desktop.</p>
+<p>Notebooks are available from the module VLE site. They should be downloaded and placed in the <code class="docutils literal notranslate"><span class="pre">notebooks/</span></code> directory that is contained within the directory that you launched the TM351 OCL Docker contaner in. The notebooks will persist in that directory even if the Docker container is destroyed and Docker is uninstalled from your computer.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="use_in_tm129.html" title="Previous document">Use in TM129</a>
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Open Computing Lab Guide</a></h1>
+
+
+
+<p class="blurb">Documentation...</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Open_Computing_Lab (OCL)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html">Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Downloading-and-Installing-Your-Open-Computing-Lab-Environment">Downloading and Installing Your Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Download-and-Install-Docker">Download and Install Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Running-an-Open-Computing-Lab-Environment-Via-Docker">Running an Open Computing Lab Environment Via Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Sharing-Files-into-the-Container">Sharing Files into the Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_containds.html">Running an Open Computing Lab Environment via the ContainDS Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_mybinder.html">Accessing RoboLab Online - MyBinder / BinderHub</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html">Use in TM129</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html#Accessing-the-TM129-Open-Computing-Lab-Environment">Accessing the TM129 Open Computing Lab Environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Use In TM351</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Accessing-the-TM351-Open-Computing-Lab-Environment">Accessing the TM351 Open Computing Lab Environment</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="use_in_tm129.html" title="previous chapter">Use in TM129</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;The Open University, 2020.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/use_in_tm351.md"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

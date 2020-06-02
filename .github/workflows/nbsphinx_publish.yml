@@ -63,32 +63,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
 
-      - name: Build docs LaTeX
-        run: python -m sphinx . ./_build/latex/ -b latex
-      - name: Build docs ePub
-        continue-on-error: true
-        run: python -m sphinx . ./_build/epub/ -b epub
-      - name: Cache Tectonic (latex / PDF) Packages
-        uses: actions/cache@v1
-        with:
-          path: ~/.cache/Tectonic
-          key: ${{ runner.os }}-tectonic-packages
-      - name: Build PDF from LaTeX
-        continue-on-error: true
-        run: tectonic ./_build/latex/nbsphinx.tex
-
-      - name: Create _artifacts folder
-        run: |
-          mkdir - p _artifacts
-          ( test -f ./_build/latex/nbsphinx.pdf && cp ./_build/latex/nbsphinx.pdf _artifacts) || echo "No PDF found."
-          ( test -f ./_build/epub/sphinx.epub && cp ./_build/epub/sphinx.epub _artifacts) || echo "No EPUB found."
-      - name: Upload _artifacts folder
-        if: always()
-        uses: actions/upload-artifact@v1
-        with:
-          name: docs
-          path: ./_artifacts
-
       - name: Commits for build branch
         run: |       
           git add --all --force _build

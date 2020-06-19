@@ -4,6 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessing RoboLab Online - MyBinder / BinderHub &#8212; Open Computing Lab Guide  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -43,16 +44,30 @@
 <li><p>as a zipped archive file of all notebooks using the the download button on the notebook homepage.</p></li>
 </ul>
 <p>You can also upload your own notebooks from the notebook homepage either individually, or as a zip file. If you upload a zip file, you will need to unzip it. You can do this from a notebook command cell using the <code class="docutils literal notranslate"><span class="pre">unzip</span></code> shell command or <a class="reference external" href="https://thispointer.com/python-how-to-unzip-a-file-extract-single-multiple-or-all-files-from-a-zip-archive/">using Python code</a>. More details can be found in the <strong>TO DO?? - see the ``RoboLab Environment FAQ``</strong></p>
-<div class="section" id="Persisting-Files-on-MyBinder">
-<h2>Persisting Files on MyBinder<a class="headerlink" href="#Persisting-Files-on-MyBinder" title="Permalink to this headline">¶</a></h2>
 <p>The environment launched from MyBinder is ephemeral - it is created on demand when you click a <code class="docutils literal notranslate"><span class="pre">launch</span> <span class="pre">binder</span></code> button and is destroyed after a short period of inactivity.</p>
-<p>To save your work when working on MyBinder, there are two approaches you can take.</p>
-<div class="section" id="Using-Notebook-Storage">
-<h3>Using Notebook Storage<a class="headerlink" href="#Using-Notebook-Storage" title="Permalink to this headline">¶</a></h3>
+<p>To save your work when working on MyBinder, there are two approaches you can take:</p>
+<ul class="simple">
+<li><p>using browser storage;</p></li>
+<li><p>downloading and uploading files.</p></li>
+</ul>
+<div class="section" id="Using-Browser-Storage">
+<h2>Using Browser Storage<a class="headerlink" href="#Using-Browser-Storage" title="Permalink to this headline">¶</a></h2>
+<p>When running a notebook in MyBinder, on the toolbar you will see a group of three icons:</p>
+<p><img alt="image1" src="_images/browser_storage.png" /></p>
+<p>The cloud buttons with the up and down arrows can be used to save the current notebook using your web browser’s file storage mechanism.</p>
+<p>Click the cloud with the down arrow (<em>Save to browser storage</em>) to save a copy of the notebook in your browser’s file store. Note that you can do this even if the MyBinder session has timed out, as long as you can see the notebook in your browser.</p>
+<p>If you create another MyBinder session at a later time, and open a notebook from the notebook home page, if you remember previously having saved that notebook to notebook storage, you can press the cloud button with the up arrow (<em>Restore from browser storage</em>) to replace the copy of the notebook provided by MyBinder by default with the copy you previously saved.</p>
+<p>This is a little bit clunky, and means you have to remember that you saved a notebook to browser storage, but it works!</p>
+<p>Note also that you save the file to the storage associated with a particular browser. If you save a notebook when using a Firefox browser, the files will not be available if you later visit MyBinder using Chrome.</p>
+<p><strong>TO CHECK: does file storage synch across logged in instances of Chrome?</strong></p>
 </div>
 <div class="section" id="Downloading-and-Uploading-Files">
-<h3>Downloading and Uploading Files<a class="headerlink" href="#Downloading-and-Uploading-Files" title="Permalink to this headline">¶</a></h3>
-</div>
+<h2>Downloading and Uploading Files<a class="headerlink" href="#Downloading-and-Uploading-Files" title="Permalink to this headline">¶</a></h2>
+<p>Another way of saving files is to download them to your own computer desktop and then upload then when you want to work on them again. The <em>Download</em> button will download the current notebook to you desktop. You can then upload a notebook saved to your desktop using the <em>Upload</em> button on the notebook server home page.</p>
+<p><img alt="image2" src="_images/jupyter_notebook_upload.png" /></p>
+<p>The “down” arrow button on the top right-hand side notebook homepage will zip and download <em>all</em> the files in the notebook listing, including all the files in any subdirectories / subfolders.</p>
+<p>Alternatively, if you check a single file from the notebook homepage, you can choose to selectively download just that file by clicking the <em>Download</em> button from that is displayed when you check the item.</p>
+<p><img alt="image3" src="_images/jupyter_select_download.png" /></p>
 </div>
 </div>
 
@@ -101,7 +116,8 @@
 <li class="toctree-l1"><a class="reference internal" href="using_docker.html#Sharing-Files-into-the-Container">Sharing Files into the Container</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_containds.html">Running an Open Computing Lab Environment via the ContainDS Application</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Accessing RoboLab Online - MyBinder / BinderHub</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Persisting-Files-on-MyBinder">Persisting Files on MyBinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Using-Browser-Storage">Using Browser Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Downloading-and-Uploading-Files">Downloading and Uploading Files</a></li>
 </ul>
 </li>
 </ul>
@@ -138,7 +154,7 @@
       &copy;The Open University, 2020.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

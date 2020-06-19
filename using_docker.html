@@ -4,6 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements &#8212; Open Computing Lab Guide  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -83,8 +84,9 @@
 <ul class="simple">
 <li><p>create a working directory / folder to work in by entering the command: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">TM129</span></code>;</p></li>
 <li><p>change directory into that directory by running the command: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">TM129</span></code>;</p></li>
-<li><p>start the container by running the command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">tm129test</span> <span class="pre">-p</span> <span class="pre">8129:8888</span> <span class="pre">-v</span> <span class="pre">$PWD:/home/jovyan/notebooks</span> <span class="pre">-e</span> <span class="pre">JUPYTER_TOKEN=&quot;letmein&quot;</span> <span class="pre">ousefuldemos/tm129-robotics2020:latest</span></code></p></li>
+<li><p>start the container by running the command: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">tm129test</span> <span class="pre">-p</span> <span class="pre">8129:8888</span> <span class="pre">-v</span> <span class="pre">&quot;$PWD:/home/jovyan/notebooks&quot;</span> <span class="pre">-e</span> <span class="pre">JUPYTER_TOKEN=&quot;letmein&quot;</span> <span class="pre">ousefuldemos/tm129-robotics2020:latest</span></code></p></li>
 </ul>
+<p><em>(The quotes round the volume mount cope with spaces in the ``$PWD`` directory path.)</em></p>
 </div>
 <div class="section" id="On-Windows:">
 <h3>On Windows:<a class="headerlink" href="#On-Windows:" title="Permalink to this headline">¶</a></h3>
@@ -209,7 +211,7 @@
       &copy;The Open University, 2020.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

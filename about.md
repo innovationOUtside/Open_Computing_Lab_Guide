@@ -35,10 +35,11 @@ The OCL approach is based on the use of:
 To install the environment, use the installation instructions that are provided for students.
 <!-- #endregion -->
 
-RoboLab is an example of an `Open Computing Lab (OCL)` environment configured specifically to support your TM129 activities.
+RoboLab is an example of an `Open Computing Lab (OCL)` environment configured specifically to support your TM129 activities ([example](https://github.com/innovationOUtside/tm129-robotics2020/)).
 
-The `Open Computing Lab` approach is being trialled on several Open University modules and aims to provide a common approach to delivering complex software and computing envronments on personal computers as well as via remotely hosted online servers.
+## Design Principles
 
+One important thing to note about the design of the Open Computing lab environments is that a single environment is designed, and then automation tools generate different instances of the environment for use in different locatins (on a student's own computer, via an OU hosted service, etc.) This guarantees that students see the same environment configuration wherever they access it from.
 
 <!-- #region slideshow={"slide_type": "slide"} -->
 ## Accessing Open Computer Lab Environments

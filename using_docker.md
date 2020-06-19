@@ -69,7 +69,9 @@ Open a terminal. From the command prompt, do the following:
 
 - create a working directory / folder to work in by entering the command: `mkdir TM129`;
 - change directory into that directory by running the command: `cd TM129`;
-- start the container by running the command: `docker run --name tm129test -p 8129:8888 -v $PWD:/home/jovyan/notebooks -e JUPYTER_TOKEN="letmein" ousefuldemos/tm129-robotics2020:latest`
+- start the container by running the command: `docker run --name tm129test -p 8129:8888 -v "$PWD:/home/jovyan/notebooks" -e JUPYTER_TOKEN="letmein" ousefuldemos/tm129-robotics2020:latest`
+
+*(The quotes round the volume mount cope with spaces in the `$PWD` directory path.)*
 
 ##### On Windows:
 

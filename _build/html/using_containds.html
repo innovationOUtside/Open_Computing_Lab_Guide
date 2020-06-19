@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running an Open Computing Lab Environment via the ContainDS Application &#8212; Open Computing Lab Guide  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Accessing RoboLab Online - MyBinder / BinderHub" href="using_mybinder.html" />
+    <link rel="prev" title="Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements" href="using_docker.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="Running-an-Open-Computing-Lab-Environment-via-the-ContainDS-Application">
+<h1>Running an Open Computing Lab Environment via the ContainDS Application<a class="headerlink" href="#Running-an-Open-Computing-Lab-Environment-via-the-ContainDS-Application" title="Permalink to this headline">¶</a></h1>
+<p><strong>TO DO: ContainDS has moved on since this guidance was originally written. If the instructions are wrong / don’t work, please comment back to</strong><a class="reference external" href="https://github.com/innovationOUtside/tm129-robotics2020/issues/6">this issue</a><strong>.</strong></p>
+<p><em>ContainDS</em> is a cross-platform (MacOS, Windows) desktop application that simplifies the launching and management of Docker containers in general, and Docker containers that incorporate Jupyter notebook servers in particular.</p>
+<p>Download and install the latest version of Docker. Follow the initial guidance in the <code class="docutils literal notranslate"><span class="pre">using_docker.md</span></code> document to install docker. (You do not need to follow the guidance re: <em>using</em> Docker; the ContainDS application provides another way of doing that.)</p>
+<p>Download and install the latest version of the ContainDS application directly from the <a class="reference external" href="https://containds.com/">ContainDS website</a>:</p>
+<ul class="simple">
+<li><p><strong>Windows</strong> — use <em>one</em> of the following:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">`exe</span></code> installer &lt;<a class="reference external" href="http://containdsreleases.s3-website.us-east-2.amazonaws.com/latest/exe">http://containdsreleases.s3-website.us-east-2.amazonaws.com/latest/exe</a>&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`msi</span></code> installer &lt;<a class="reference external" href="http://containdsreleases.s3-website.us-east-2.amazonaws.com/latest/msi">http://containdsreleases.s3-website.us-east-2.amazonaws.com/latest/msi</a>&gt;`__</p></li>
+</ul>
+</li>
+<li><p><strong>MacOS</strong> — use <em>one</em> of the following:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">`pkg</span></code> installer &lt;<a class="reference external" href="http://containdsreleases.s3-website.us-east-2.amazonaws.com/latest/pkg">http://containdsreleases.s3-website.us-east-2.amazonaws.com/latest/pkg</a>&gt;`__</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`dmg</span></code> installer &lt;%60http://containdsreleases.s3-website.us-east-2.amazonaws.com/latest/dmg%60&gt;`__</p></li>
+<li><p><strong>Linux</strong>: <em>not currently available</em> <strong>TO DO: Kitematic might be a GUI fall back; or command line, which might make sense anyway.</strong></p></li>
+</ul>
+</li>
+</ul>
+<p>Alternatively, you may save the installer to your computer by right-clicking the appropriate link and choosing <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Link</span> <span class="pre">As…</span></code> or <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Target</span> <span class="pre">As…</span></code>.</p>
+<p>Locate the folder containing the downloaded installer: your browser may have a <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> folder, or it may have saved the downloaded file to the <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Documents</span></code> or <code class="docutils literal notranslate"><span class="pre">Desktop</span></code> folder. Inside the download folder, find the downloaded installer file and double-click it to run it.</p>
+<p><strong>TO DO - could we get any security warnings?? If so, what, and how do we resolve them??</strong></p>
+<p>If you saved the installer earlier, you may now delete it since it is no longer required.</p>
+<p>The ContainDS application is a desktop application. Run it as you would any other application:</p>
+<ul class="simple">
+<li><p>Windows: launch the application <strong>TO DO: how??</strong></p></li>
+<li><p>MacOS: the application will be installed into your <code class="docutils literal notranslate"><span class="pre">Applications</span></code> folder. You can launch it from there, or add the application icon the Dock to make it easier to find and launch. See also: <a class="reference external" href="https://support.apple.com/en-gb/guide/mac-help/mh35859/mac">MacOS documentation - using the Dock</a>.</p></li>
+</ul>
+<div class="section" id="Using-ContainDS-to-Install-the-Prebuilt-Open-Computing-Lab-Container-Image">
+<h2>Using ContainDS to Install the Prebuilt Open Computing Lab Container Image<a class="headerlink" href="#Using-ContainDS-to-Install-the-Prebuilt-Open-Computing-Lab-Container-Image" title="Permalink to this headline">¶</a></h2>
+<p><em>Note that in this approach, you will</em><strong>not</strong><em>be able to synchronise files inside the container with a persistent directory on your desktop.</em></p>
+<p>Open the ContainDS application, select the <code class="docutils literal notranslate"><span class="pre">Docker</span></code> tab and search for <code class="docutils literal notranslate"><span class="pre">tm129</span></code>. Select the <code class="docutils literal notranslate"><span class="pre">tm129-robotics2020</span></code> image.</p>
+<p><img alt="Screenshot of the ContainDS Docker image selection tab showing how to select the TM129 image." src="_images/00_01_ContainDS_tm129_download.png" /></p>
+<p>If you have not previously downloaded the image, ContainDS will download it for you:</p>
+<p><img alt="Screenshot showing the ContainDS Docker image download progress display indicating the percentage completion of one of the layers in the current download." src="_images/00_01_ContainDS_tm129_downloading.png" /></p>
+<p>Do not be concerned if the download percentage indicator sometimes goes down as well as up — the downloader is actually downloading multiple items at once. (The container image is made up from several layers, each of which is downloaded separately, before they are combined in the final image.)</p>
+<p>When everything had downloded, you may find your computer appears to be doing nothing for a minute or two, or even appears to get stuck just short of a 100% complete donwload. <em>Don’t Panic!</em> The downloaded layers are all compressed files, and it may take some time for your computer to unzip them all.</p>
+<p>Once downloaded, you will be prompted for a method of starting the container. Select “Standard”:</p>
+<p><img alt="Screenshot showing the ContainDS dialogue for how to start a Docker container, with three buttons displayed: force a Jupyter start command (“Force Jupyter”), let the container run from its own start command (“Standard”, shown as the option to select) or “Cancel”." src="_images/00_01_ContainDS_standard_run.png" /></p>
+<p>The container will now be launched and a log trace displayed.</p>
+<p>At this point, you need to <code class="docutils literal notranslate"><span class="pre">STOP</span></code> the container and remove it:</p>
+<p><img alt="Screenshot showing a ContainDS running container with the run log displayed and a dialogue raised by clicking the container close button offering tow buttons, one with the option to “Cancel”, the other with the option to “Remove”, which is to say, stop and remove, the running container." src="_images/00_01_containds_stopRemove.png" /></p>
+<p>Now create a running version of the container from the <em>local</em> Docker image. This will allow you to share a local directory into the container as well as clicking through directly to the notebook homep[age in your browser.</p>
+</div>
+<div class="section" id="Using-ContainDS-To-Run-the-Open-Computing-Lab-Environment-from-a-Local-Docker-Image">
+<h2>Using ContainDS To Run the Open Computing Lab Environment from a Local Docker Image<a class="headerlink" href="#Using-ContainDS-To-Run-the-Open-Computing-Lab-Environment-from-a-Local-Docker-Image" title="Permalink to this headline">¶</a></h2>
+<p>Click on the <code class="docutils literal notranslate"><span class="pre">+NEW</span></code> button and then select the <code class="docutils literal notranslate"><span class="pre">Docker</span></code> tab and then the <code class="docutils literal notranslate"><span class="pre">Local</span> <span class="pre">Images</span></code> tab:</p>
+<p><img alt="Screenshot of ContainDS “Local Images” tab on ContainDS Docker tab page showing selection of TM129 image." src="_images/00_01_ContainDS_local.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">SELECT</span></code> the local copy of the <code class="docutils literal notranslate"><span class="pre">tm129-robotics2020</span></code> container which will open the container workspace configuration page:</p>
+<p><img alt="Screenshot of ContainDS container workspace configuration page reached by selecting a local container image from “Local Images” tab on ContainDS Docker tab page." src="_images/00_01_local_workspace.png" /></p>
+<p>Set the path to the directory on your host computer that you want to share into the container. This will create a <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> directory in that directory that will be mapped onto the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> directory visible from the notebook homepage.</p>
+<p>When you <code class="docutils literal notranslate"><span class="pre">CREATE</span></code> the container, it will run automatically. Clicking the <code class="docutils literal notranslate"><span class="pre">WEB</span></code> link should take you to the notebook home page in your browser. <em>(Note that the file listing in the screenshot may differ from the file listing you see.)</em></p>
+<p><img alt="Screenshot of Jupyter notebook homepage" src="_images/00_01_simple_nb_home.png" /></p>
+<p>When you save your notebooks, they will be saved into the shared directory on your own computer.</p>
+</div>
+<div class="section" id="Using-ContainDS-to-Build-and-Run-a-RoboLab-Container-from-Scratch">
+<h2>Using ContainDS to Build and Run a RoboLab Container from Scratch<a class="headerlink" href="#Using-ContainDS-to-Build-and-Run-a-RoboLab-Container-from-Scratch" title="Permalink to this headline">¶</a></h2>
+<p>As well as running the prebuilt RoboLab container, ContainDS can also build the container image, and then launch an image from it, from scratch. (The image only needs to be built once.)</p>
+<p>Launch the ContainDS application, and then select the <code class="docutils literal notranslate"><span class="pre">Binder</span></code> tab.</p>
+<p>Enter the name of the source repository:</p>
+<p><code class="docutils literal notranslate"><span class="pre">innovationOUtside/tm129-robotics2020</span></code></p>
+<p>and click the <code class="docutils literal notranslate"><span class="pre">LAUNCH</span></code> button.</p>
+<p><img alt="Screenshot of ContainDS application showing the Binder build configuration screen and temporary build process containers in container sidebar." src="_images/00_01_ContainDS_binderhub.png" /></p>
+<p>As the image is built, you will see several temporary containers being created and destroed along the way. Note that the build process may take some time (up to 10 minutes or more).</p>
+<p>Once the image has been built, a running container will be launched from it.</p>
+<p>Click on the <code class="docutils literal notranslate"><span class="pre">WEB</span></code> link and you should be taken directly to the notebook homepage in your browser without needing to provide any notebook server token yourself.</p>
+<p><img alt="Screenshot of ContainDS application showing location of WEB button to launch notebook in browser." src="_images/00_01_containds_built_container.png" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">STOP</span></code> and remove the container, and then run it from a Local Docker Image; this will allow you to share a local directory into the container and directly click through to the notebook server homepage in your browser.</p>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="using_docker.html" title="Previous document">Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements</a>
+        </li>
+        <li>
+          <a href="using_mybinder.html" title="Next document">Accessing RoboLab Online - MyBinder / BinderHub</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Open Computing Lab Guide</a></h1>
+
+
+
+<p class="blurb">Documentation...</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Open_Computing_Lab (OCL)</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html">Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Downloading-and-Installing-Your-Open-Computing-Lab-Environment">Downloading and Installing Your Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Download-and-Install-Docker">Download and Install Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Running-an-Open-Computing-Lab-Environment-Via-Docker">Running an Open Computing Lab Environment Via Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Sharing-Files-into-the-Container">Sharing Files into the Container</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running an Open Computing Lab Environment via the ContainDS Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Using-ContainDS-to-Install-the-Prebuilt-Open-Computing-Lab-Container-Image">Using ContainDS to Install the Prebuilt Open Computing Lab Container Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Using-ContainDS-To-Run-the-Open-Computing-Lab-Environment-from-a-Local-Docker-Image">Using ContainDS To Run the Open Computing Lab Environment from a Local Docker Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Using-ContainDS-to-Build-and-Run-a-RoboLab-Container-from-Scratch">Using ContainDS to Build and Run a RoboLab Container from Scratch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_mybinder.html">Accessing RoboLab Online - MyBinder / BinderHub</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html">Use in TM129</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html#Accessing-the-TM129-Open-Computing-Lab-Environment">Accessing the TM129 Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm351.html">Use In TM351</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="using_docker.html" title="previous chapter">Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements</a></li>
+      <li>Next: <a href="using_mybinder.html" title="next chapter">Accessing RoboLab Online - MyBinder / BinderHub</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;The Open University, 2020.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/using_containds.md"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

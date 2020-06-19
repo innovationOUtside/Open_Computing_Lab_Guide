@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving and Checkpointing Your Work &#8212; Open Computing Lab Guide  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="Saving-and-Checkpointing-Your-Work">
+<h1>Saving and Checkpointing Your Work<a class="headerlink" href="#Saving-and-Checkpointing-Your-Work" title="Permalink to this headline">¶</a></h1>
+<p>Within the notebook environment, the file will be saved automatically every 120 seconds (which is to say, every two minutes).</p>
+<p>If you have changed the notebook since it was last autosaved, you will see a statement like the following next to the notebook filename at the top of the notebook:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Last</span> <span class="pre">Checkpoint:</span> <span class="pre">Last</span> <span class="pre">Friday</span> <span class="pre">at</span> <span class="pre">12:18</span> <span class="pre">AM</span> <span class="pre">(unsaved</span> <span class="pre">changes)</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">(unsaved</span> <span class="pre">changes)</span></code> phrase is akin to the <code class="docutils literal notranslate"><span class="pre">*</span></code> indicator you often see next to a filename in a document editor that shows the file has changed since it was last saved.</p>
+<p>If you watch for at most a couple of minutes, you’ll note that it soon changes to something with the following form:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Last</span> <span class="pre">Checkpoint:</span> <span class="pre">Last</span> <span class="pre">Friday</span> <span class="pre">at</span> <span class="pre">12:18</span> <span class="pre">AM</span> <span class="pre">(autosaved)</span></code></p>
+<p>You can change the autosave period using magic (yes, really! That’s what it’s called…). For example, run the following statement in a notebook code cell and it will change the autosave period <em>for that notebook only</em> to 60 seconds:</p>
+<p><code class="docutils literal notranslate"><span class="pre">%autosave</span> <span class="pre">60</span></code></p>
+<p>The autosave time can also be set using the <code class="docutils literal notranslate"><span class="pre">AutoSaveTime</span></code> notebook extension which can be enabled from the <code class="docutils literal notranslate"><span class="pre">nbextensions</span> <span class="pre">configurator</span></code> [<a class="reference external" href="/nbextensions/?nbextension=autosavetime/main">direct link</a>].</p>
+<p>As well as allowing your notebooks to be automatically saved, you can also “checkpoint” them.</p>
+<p>When you use a keyboard shortcut to manually save the file, or you save a notebook document from the notebook <code class="docutils literal notranslate"><span class="pre">File</span></code> menu, you are actually issuing a <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">and</span> <span class="pre">Checkpoint</span></code> command. This saves in the same way that the autosave function does, but it <em>also</em> generates a checkpointed (backed up) version of the file in the hidden <code class="docutils literal notranslate"><span class="pre">.ipynb_checkpoints</span></code> folder.</p>
+<p>What this means is that if you work on a file, allowing it to be autosaved, and realise that you have made some terrible mistakes in it, you can revert the notebook to a previously checkpointed (manually saved) version.</p>
+<p>Note that this will throw away all changes made to the autosaved version of the notebook since the last manual (checkpointing) save, so use this command with care.</p>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Open Computing Lab Guide</a></h1>
+
+
+
+<p class="blurb">Documentation...</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Open_Computing_Lab (OCL)</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html">Running An Open Computing Lab Environment On Your Own Computer - Computer Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Downloading-and-Installing-Your-Open-Computing-Lab-Environment">Downloading and Installing Your Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Download-and-Install-Docker">Download and Install Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Running-an-Open-Computing-Lab-Environment-Via-Docker">Running an Open Computing Lab Environment Via Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_docker.html#Sharing-Files-into-the-Container">Sharing Files into the Container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_containds.html">Running an Open Computing Lab Environment via the ContainDS Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_mybinder.html">Accessing RoboLab Online - MyBinder / BinderHub</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html">Use in TM129</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm129.html#Accessing-the-TM129-Open-Computing-Lab-Environment">Accessing the TM129 Open Computing Lab Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_in_tm351.html">Use In TM351</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;The Open University, 2020.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/saving_and_checkpointing_work.md"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

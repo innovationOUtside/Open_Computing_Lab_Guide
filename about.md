@@ -28,7 +28,9 @@ The motivating idea for the Open Computing Lab approach is the provision of modu
 
 The OCL approach is based on the use of:
 
-- Docker containers, for providing a way of packaging and distributing arbitrary computational envirionments running arbitrary applications;
+- Docker containers, for providing a way of packaging and distributing arbitrary computational envirionments running arbitrary applications; these might include:
+  - applications with a native browser based user interface;
+  - remote desktop applications (currently limited to Linux desktop; Microsoft Windows applications run under Wine);
 - Jupyter services for providing single and multi-user access to browser accessed applications and environments.
 
 <!-- #region slideshow={"slide_type": "skip"} -->

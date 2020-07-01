@@ -1,6 +1,8 @@
 # Open\_Computing\_Lab\_Guide
 Introductory guide to a prototype Open Computing Lab
 
+__THIS REPO IS ALREADY IN THE PROCESS OF BEING DEPRECATED IN FAVOUR OF [`OpenComputingLab` repos](https://github.com/OpenComputingLab/)__
+
 This guide is also autobuilt as an `nbsphinx` site nd published via Github Pages at [innovationoutside.github.io/Open_Computing_Lab_Guide/](https://innovationoutside.github.io/Open_Computing_Lab_Guide/).
 
 

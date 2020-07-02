@@ -11,15 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check build branch exists
-        uses: peterjgrainger/action-create-branch@v2.0.0
-        env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          branch: build
       - uses: actions/checkout@v2
-      - run: |
-          git fetch --no-tags --prune origin +refs/heads/*:refs/remotes/origin/*
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
@@ -45,18 +37,9 @@ jobs:
       #    python -c "import nbsphinx; print('nbsphinx.__version__==', nbsphinx.__version__)"
       #    pandoc -v
       #    pip freeze
-
-      - name: Use build branch context
-        run: |
-          sudo chown -R $(whoami):$(whoami) .
-          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git config --global user.name "$GITHUB_ACTOR"
-          git checkout build
-          # And bring down changes from master
-          #git merge --allow-unrelated-histories
-          #git pull origin master --allow-unrelated-histories
-          git fetch origin        # gets you up to date with origin
-          git merge origin/master --allow-unrelated-histories
+  
+      # This is a no-cache approach; we really should be doing this in a build dir
+      # pulling updates from master, rebuilding, then saving the build files.
       - name: Build docs HTML
         run: python -m sphinx . ./_build/html/ -b html
 
@@ -66,14 +49,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
 
-      - name: Commits for build branch
-        run: |       
-          git add --all --force _build
-          git commit -a --allow-empty-message -m 'Push build branch'
- 
-      - name: Push changes to build branch
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: build
-          force: true
